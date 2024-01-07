@@ -50,8 +50,8 @@ export class LoginComponent {
   }
   
   private checkCredentials(email: string, password: string): boolean {
-    const hardcodedEmail = 'surajyelmate444@gmail.com';
-    const hardcodedPassword = 'Suraj@123';
+    const hardcodedEmail = 'mangeshpawar830@gmail.com';
+    const hardcodedPassword = 'Mangesh123';
     return email === hardcodedEmail && password === hardcodedPassword;
   }
   
