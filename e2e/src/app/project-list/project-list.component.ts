@@ -29,19 +29,8 @@ export class ProjectListComponent implements OnInit {
     })
   }
 
-  public searchProjectList(elmt:any): void {
-    this.api.search_project_list(elmt.target.value).subscribe((res: any) => {
-      this.projectData = res;
-      this.totalProduct = res.length;
-    })
-  }
+ 
 
-  public orderProjectList(elmt:any): void {
-    this.api.order_project_list(elmt.target.value).subscribe((res: any) => {
-      this.projectData = res;
-      this.totalProduct = res.length;
-    })
-  }
 
   public changestatus(id:number,obj:any): void {
 
@@ -51,8 +40,15 @@ export class ProjectListComponent implements OnInit {
 
       console.log(obj);
       this.getProjects();
-     // this.ngOnInit();
 
     })
+  }
+
+  onSearch() {
+    this.getProjects();
+  }
+
+  onSort() {
+    this.getProjects();
   }
 }

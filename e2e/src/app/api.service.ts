@@ -9,36 +9,28 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  private baseurl = "http://localhost:8080/projectcatogory"; // Corrected base URL
+  private baseurl = "http://localhost:8080/projectcatogory"; 
 
   add_project(obj: any) {
-    return this.http.post(`${this.baseurl}/save`, obj); // Corrected URL
+    return this.http.post(`${this.baseurl}/save`, obj); 
   }
 
   project_lists() {
-    return this.http.get(`${this.baseurl}/getAllinfo`); // Corrected URL
+    return this.http.get(`${this.baseurl}/getAllinfo`); 
   }
 
-  search_project_list(object: any) {
-    var obj = { 'text': object };
-    return this.http.post('http://localhost:1000/search_project_list', obj);
-  }
-
-  order_project_list(column: any) {
-    var obj = { 'column': column };
-    return this.http.post('http://localhost:1000/order_project_list', obj);
-  }
+ 
 
   change_status(id: number, status: any) {
     const obj = { 'psid': id, 'psname': status };
-    return this.http.post(`${this.baseurl}/changeStatus`, obj); // Corrected URL
+    return this.http.post(`${this.baseurl}/changeStatus`, obj); 
   }
 
   project_count() {
-    return this.http.get(`${this.baseurl}/projectcount`); // Corrected URL
+    return this.http.get(`${this.baseurl}/projectcount`); 
   }
 
   chart_count(): Observable<any> {
-    return this.http.get(`${this.baseurl}/summary`); // Corrected URL and return type
+    return this.http.get(`${this.baseurl}/summary`); 
   }
 }

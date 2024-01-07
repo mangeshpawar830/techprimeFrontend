@@ -4,9 +4,9 @@
         <div class="col-md-12 shadow p-4 project-listing-container">
             <div class="row">
                 <div class="col-md-12">
-                    <input type="search" (keyup)="searchProjectList($event)" class="serch-input" placeholder="Search">
+                    <input type="search" (keyup)="onSearch()" class="serch-input" placeholder="Search">
                     <div class="text-right">
-                        Sort by : <select (click)="orderProjectList($event)" class="sort-box">
+                        Sort by : <select (click)="onSort()" class="sort-box">
                             <option value="project_priority">Priority</option>
                             <option value="project_category">Category</option>
                             <option value="project_reason">Reason</option>
