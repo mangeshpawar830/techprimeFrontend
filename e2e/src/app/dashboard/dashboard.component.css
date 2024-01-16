@@ -43,3 +43,11 @@
         font-size: 30px;
     }
 }
+
+@media screen and (min-device-width: 320) and (max-device-width:480) {
+.ml-2
+{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+}

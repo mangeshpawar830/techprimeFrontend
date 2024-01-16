@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.api.project_count().subscribe((res: any) => {
       this.projectCount = res;
+      console.log(this.projectCount);
     });
 
     this.api.chart_count().subscribe((response: any[][]): void => {
